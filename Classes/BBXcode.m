@@ -102,7 +102,7 @@ NSString * BBStringByTrimmingTrailingCharactersFromString(NSString *string, NSCh
                 if ([selectedObject isKindOfClass:NSClassFromString(@"IDEFileNavigableItem")]) {
                     IDEFileNavigableItem *fileNavigableItem = selectedObject;
                     NSString *uti = fileNavigableItem.documentType.identifier;
-                    if ([uti isEqualToString:(NSString *)kUTTypeObjectiveCSource] || [uti isEqualToString:(NSString *)kUTTypeCHeader]) {
+                    if ([uti isEqualToString:(NSString *)kUTTypeObjectiveCSource] || [uti isEqualToString:(NSString *)kUTTypeObjectiveCPlusPlusSource] || [uti isEqualToString:(NSString *)kUTTypeCHeader]) {
                         [mutableArray addObject:fileNavigableItem];
                     }
                 }
