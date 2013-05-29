@@ -266,12 +266,6 @@ NSString * BBStringByTrimmingTrailingCharactersFromString(NSString *string, NSCh
     
     DVTTextPreferences *preferences = [DVTTextPreferences preferences];
     
-    if (preferences.useSyntaxAwareIndenting) {
-        // PS: The method [DVTSourceTextStorage indentCharacterRange:undoManager:] always indents empty lines to the same level as code (ignoring the preferences in Xcode concerning the identation of whitespace only lines).
-        [textStorage indentCharacterRange:characterRange undoManager:[document undoManager]];
-        characterRange = [textStorage characterRangeForLineRange:scopeLineRange];
-    }
-    
     if (preferences.trimTrailingWhitespace) {
         BOOL trimTrailingWhitespace = preferences.trimTrailingWhitespace;
         BOOL trimWhitespaceOnlyLines = trimTrailingWhitespace && preferences.trimWhitespaceOnlyLines; // only enabled in Xcode preferences if trimTrailingWhitespace is enabled

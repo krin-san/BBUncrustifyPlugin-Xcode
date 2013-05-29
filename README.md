@@ -71,8 +71,6 @@ Once UncrustifyX is installed, the plugin will add a menu item `Open with Uncrus
 
 After uncrustification, the plugin:
 
-* performs a syntax-aware indenting if checked in the Xcode preferences (Preferences > Text Editing > Indentation > Syntax-aware indenting).
-
 * Trims trailing whitespaces and white-only lines if checked in the Xcode preferences (Preferences > Text Editing > Editing).
 
 

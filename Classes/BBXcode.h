@@ -17,7 +17,6 @@
 + (id)preferences;
 @property BOOL trimWhitespaceOnlyLines;
 @property BOOL trimTrailingWhitespace;
-@property BOOL useSyntaxAwareIndenting;
 @end
 
 @interface DVTSourceTextStorage : NSTextStorage
